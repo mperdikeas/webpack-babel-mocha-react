@@ -3,7 +3,7 @@ import AssertionError  from 'assertion-error';
 assert.isOk(AssertionError);
 
 
-import {theAnswer} from '../app/util.js';
+import {theAnswer} from '../src/util.js';
 
 
 describe('level 1', function () {

@@ -1,5 +1,5 @@
 node_modules/
-build/bundle.js
+dist/bundle.js
+dist/index.html
 npm-debug.log*
-build/index.html
 lib/

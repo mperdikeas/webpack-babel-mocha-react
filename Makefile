@@ -1,6 +1,6 @@
 all:
 	npm install
-	npm run build
+	npm run dist
 	npm run test
 
 clean:

@@ -4,7 +4,7 @@ const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
-    template: path.resolve(__dirname, 'app', 'index.html'),
+    template: path.resolve(__dirname, 'src', 'index.html'),
     filename: 'index.html',
     inject: 'body'
 });
@@ -12,19 +12,17 @@ const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
 const config = {
     mode: 'production',
     devtool: 'eval-source-map',
-    entry: './app/main.js',
+    entry: './src/main.js',
     output: {
-        path: path.resolve(__dirname, 'build'),
+        path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js'
     },
     module: {
         rules: [
             {
                 test: /\.js$/,
-                include: path.resolve(__dirname, 'app/'),
-                use: {
-                    loader: 'babel-loader'
-                }
+                include: path.resolve(__dirname, 'src/'),
+                use: 'babel-loader'
             },{
                 test: /\.css$/,
                 loader: ['style-loader', 'css-loader']
